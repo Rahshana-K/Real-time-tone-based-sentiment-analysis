@@ -30,7 +30,7 @@ saved_weights_path = 'gru_model_weights.weights.h5'
 with open(saved_model_path, 'r') as json_file:
     json_savedModel = json_file.read()
 
-model_audio = tf.keras.models.model_from_json(json_savedModel)
+model_audio = tf.keras.models.load_model( 'gru_model_weights.weights.h5')
 model_audio.load_weights(saved_weights_path)
 
 # Functions for feature extraction
