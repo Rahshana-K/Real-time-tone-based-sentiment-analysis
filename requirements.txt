@@ -6,3 +6,7 @@ librosa
 librosa
 matplotlib
 pipeline
+tensorflow
+pywt
+warnings
+ pipeline
