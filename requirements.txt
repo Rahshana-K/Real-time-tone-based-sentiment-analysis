@@ -1,3 +1,9 @@
 pyaudio 
 numpy
 pandas
+streamlit
+numpy
+plotly
+pandas
+wordcloud
+matplotlib
