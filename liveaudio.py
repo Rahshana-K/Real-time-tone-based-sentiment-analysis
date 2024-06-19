@@ -25,10 +25,9 @@ RECORD_SECONDS = 7.1
 FORMAT = pyaudio.paInt32
 CHANNELS = 1
 
-# Load emotion detection model
-emotion_pipe = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base")
 
-# Load saved LSTM model for audio emotion prediction
+
+
 saved_model_path = 'gru_model.json'
 saved_weights_path = 'gru_model_weights.weights.h5'
 
@@ -67,18 +66,7 @@ def predict_emotion_audio(wav_filepath):
     predicted_emotion = emotions[np.argmax(predictions[0]) + 1]
     return predicted_emotion
 
-def recognize_and_predict_text(audio_file):
-    r = sr.Recognizer()
-    with sr.AudioFile(audio_file) as source:
-        audio_data = r.record(source)
-        try:
-            text = r.recognize_google(audio_data)
-            st.write("You said:", text)
-            emotion_result = emotion_pipe(text)[0]["label"]
-            return text, emotion_result
-        except sr.UnknownValueError:
-            st.write("Sorry, I could not understand the audio.")
-            return None, None
+
 def linechart(emotion_live):
     time_intervals = [i*7 for i in range(len(emotion_live))]
     emotion_values = {'neutral': 0, 'calm': 1, 'happy': 2, 'sad': 3, 'angry': 4, 'fearful': 5, 'disgust': 6, 'surprised': 7}
