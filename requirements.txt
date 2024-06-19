@@ -8,6 +8,6 @@ matplotlib
 pipeline
 tensorflow
 pywavelets
-pywt
+
 warnings
  pipeline
