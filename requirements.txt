@@ -1,4 +1,5 @@
 streamlit
+portaudio
 pyaudio
 wave
 numpy 
