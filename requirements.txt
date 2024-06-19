@@ -5,9 +5,4 @@ numpy
 librosa
 librosa
 matplotlib
-io
-tensorflow
-pywt
-warnings
-transformers
 pipeline
