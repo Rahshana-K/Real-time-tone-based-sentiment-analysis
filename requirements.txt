@@ -1,6 +1,5 @@
 streamlit
-portaudio
-pyaudio
+Pyaudio
 wave
 numpy 
 librosa
