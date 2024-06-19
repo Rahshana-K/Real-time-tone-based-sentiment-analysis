@@ -8,10 +8,7 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 import tensorflow as tf
 import pywt
-import warnings
-import time
-from transformers import pipeline
-import speech_recognition as sr
+
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
