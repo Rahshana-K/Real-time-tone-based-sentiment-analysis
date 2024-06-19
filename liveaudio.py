@@ -24,14 +24,10 @@ CHANNELS = 1
 
 
 
-saved_model_path = 'gru_model.json'
-saved_weights_path = 'gru_model_weights.weights.h5'
 
-with open(saved_model_path, 'r') as json_file:
-    json_savedModel = json_file.read()
 
-model_audio = tf.keras.models.load_model( 'gru_model_weights.weights.h5')
-model_audio.load_weights(saved_weights_path)
+model_audio = tf.keras.models.load_model( 'mymodel.h5')
+
 
 # Functions for feature extraction
 def extract_mfcc(y, sr):
